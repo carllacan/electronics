@@ -1,0 +1,48 @@
+* Description
+  + Three sinusoidal power sources, out of p0hase by 120º with each other, feed three equal loads with a node in common. 
+#+DOWNLOADED: file:///home/carles/Pictures/Screenshot%20from%202018-11-02%2022-20-19.png @ 2018-11-02 22:20:35
+[[file:Description/Screenshot%2520from%25202018-11-02%252022-20-19_2018-11-02_22-20-35.png]]
+  + If the three loads are exactly equal the voltage at the common node is zero, and there is no need for a return cable, since the current through one line returns through the other two.
+    + Proof: if you have three phasors with the same amplitude at 120º respect each other their sum is exactly zero. If the loads are equal the current phasors are equal too, and they cancel each other. Of course, since they go into the same node their sum must be zero (I1 + I2 + I3 = 0), but the point is that their sum is zero even independent of this, so if there was a fourth wire from the common node to the sources' ground we would have  I1 + I2 + I3 + Ir = 0 -> Ir = 0 and the return cable would be useless.
+    + Simulation:
+#+DOWNLOADED: file:///home/carles/Pictures/Screenshot%20from%202018-11-02%2022-21-21.png @ 2018-11-02 22:21:30
+[[file:Description/Screenshot%2520from%25202018-11-02%252022-21-21_2018-11-02_22-21-30.png]]
+  + Also, the total power delivered to the loads is constant.
+    + Proof: todo
+    + Simulation: (note the range of the y axis)
+
+#+DOWNLOADED: file:///home/carles/Pictures/Screenshot%20from%202018-11-02%2022-23-26.png @ 2018-11-02 22:23:58
+[[file:Description/Screenshot%2520from%25202018-11-02%252022-23-26_2018-11-02_22-23-58.png]]
+  + The connection where the three loads share a node is called start configuration, or Wye configuration. In the alternative configuration called delta configuration each pair of loads shares one node:
+
+#+DOWNLOADED: file:///home/carles/Pictures/Screenshot%20from%202018-11-02%2022-53-37.png @ 2018-11-02 22:53:46
+[[file:Description/Screenshot%2520from%25202018-11-02%252022-53-37_2018-11-02_22-53-46.png]]
+    + Advantages of Wye versus delta configuration todo
+* Applications
+  + With respect to single-phase power three-phase systems can deliver three times as much power using only 1,5 times more cable. This reduces costs and reduces conduction losses. Because of this it is used in high-power distribution systems.
+  + Question: how much power loss is saved?
+  + Question: are there any advantages besides the absence of the return path and the losses?
+  + Although only three lines are used to carry the power to a distribution transformer there might be a neutral wire connecting the common node of the star secondary transformer, so that if the loads become unbalanced there is a return path for the current. An installation without it is called floating neutral, and can have some applications (which ones? todo)
+    + The neutral should be grounded, for safety reasons. The return currents will cause a voltage differential IR between neutral an ground, which indicate how unbalanced the system is. An overloaded system will unbalance the systen, and can be dangerous. 5v between ground and neutral is usually seen as the upper limit [source todo]
+* Generation
+  + Three-phase powered can be generated from single-phase power with todo
+  + Question: can you pool the power of the three phases into a single sinusoidal phase?
+* Analysis
+** Voltage difference
+   + The v difference between two phases of amplitude A and out of phase by 2pi/3 is A*sqrt(3).
+     + Proof: todo.
+** Unbalanced loads
+   + What happens if the loads are unbalanced? A phase carries more current than the others. But how much?
+   + How large would the voltage at the common node be? todo
+   + How much current would the fourth wire carry? todo
+* Triplen harmonics.
+  + The triplen harmonics are the harmonics of order 3, 6, 9... Because the three phases are out of phase by a third of a cycle and these harmonics have the fundamental freq multiplied by a multiple of three they will coincide in phase and time, and will not cancel each other.
+    + Proof: picture three phasors at 0º, 120º and 240º. The triplen order harmonics of each of these will be at 0º, n360º=0º and n720º=0º, and their magnitudes will stack.
+    + Simulation: todo
+  + A delta configuration will solve the problem of triplen harmonics. IN a delta conf both nodes of each load increase with the harmonic, and so no current passes through it. A delta-star transformer (i-e- primary in delta and secondary in star) will not transmit the triplen harmonics to the loads.
+    + simulation of star-delta transformer todo
+* Other harmonics
+  + How much do non-triplen harmonics unbalance the system? todo
+* Symmetrical components todo
+* Questions
+** Are there non-sinusoidal three-phase systems? 

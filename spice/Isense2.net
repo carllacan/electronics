@@ -1,0 +1,11 @@
+* Z:\opt\dropbox\dropbox\Dropbox\notes\pkb\electronics\speed_opt\Isense2.asc
+B1 current 0 V=V(a)
+V1 N001 0 SINE(0 1 1K)
+R1 N002 0 1
+XU1 N001 N002 a 0 Isense G=1
+.tran 1
+* elapsed time: 300m
+.meas TRAN error AVG abs(I(R1)-V(current))
+.lib pwr.sub
+.backanno
+.end

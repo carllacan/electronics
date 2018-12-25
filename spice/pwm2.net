@@ -1,0 +1,16 @@
+* Z:\opt\dropbox\dropbox\Dropbox\notes\pkb\electronics\speed_opt\pwm2.asc
+XU1 N003 pwm1 PWM Vin1=0 Vin2=1 Tperiod={T} Tdelay=0 tripdt=1m*Tperiod
+V2 N003 0 0.5
+A1 pwm1 0 0 0 0 pwm2 0 0 BUF
+B4 N002 0 V=delay(V(pwm1),dt*T)
+B5 N005 0 V=delay(V(pwm2),dt*T)
+A2 pwm1 pwm1 pwm1 pwm1 N002 0 N001 0 AND
+A3 pwm2 pwm2 pwm2 pwm2 N005 0 N004 0 AND
+.param f 100k
+.param T {1/f}
+.param dt 0.01
+.tran 0 {10*T} 0 {T/100}
+* 60 ms
+.lib LTspiceControlLibrary\PulseModulations.lib
+.backanno
+.end

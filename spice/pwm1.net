@@ -1,0 +1,14 @@
+* Z:\opt\dropbox\dropbox\Dropbox\notes\pkb\electronics\speed_opt\pwm1.asc
+B1 N001 0 V=IF(V(clock)-A,1,0) tripdt={1m*T}
+B2 N002 0 V=IF(V(clock)+A,1,0) tripdt={1m*T}
+B3 clock 0 V=sin(w*time)
+.param f 100k
+.param T {1/f}
+.param dt 0.01
+.tran 0 {10*T} 0 {T/100}
+* 90 ms\nNoJacob doesn't make it go any faster
+.param w 2*PI*f
+.param A = sin(PI*dt)
+.step param p list 1 2 3 4 5 6 7 8 9 10
+.backanno
+.end

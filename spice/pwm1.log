@@ -1,0 +1,33 @@
+Circuit: * Z:\opt\dropbox\dropbox\Dropbox\notes\pkb\electronics\speed_opt\pwm1.asc
+
+WARNING: Less than two connections to node N001.  This node is used by B1.
+WARNING: Less than two connections to node N002.  This node is used by B2.
+.OP point found by inspection.
+.step p=1
+.step p=2
+.step p=3
+.step p=4
+.step p=5
+.step p=6
+.step p=7
+.step p=8
+.step p=9
+.step p=10
+
+Date: Sun Dec 09 16:01:58 2018
+Total elapsed time: 0.311 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3918
+traniter = 3918
+tranpoints = 1404
+accept = 1295
+rejected = 109
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 74 bytes object code size  0.8/0.7/[0.6]
+Matrix Compiler2:      26 opcodes  0.8/[0.7]/0.8
+

@@ -1,1 +1,4 @@
-.raw
+*.raw
+*.log.raw
+*.op.raw
+ExamplesLTspiceControlLibrary
