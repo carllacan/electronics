@@ -16,7 +16,7 @@ a collection of links I found interesting or useful
 * https://www.smps.us/magnetics.html
 ## electric vehicles
 * https://www.youtube.com/watch?time_continue=445&v=3SAxXUIre28
-## sources of further interesting reads
+## sources of interesting reads
 * https://www.maximintegrated.com/en/design/techdocs/tutorials/
 * https://www.maximintegrated.com/en/design/techdocs/app-notes/
 * http://massmind.org/techref/power.htm
