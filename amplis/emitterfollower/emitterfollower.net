@@ -1,0 +1,35 @@
+* Z:\opt\dropbox\dropbox\Dropbox\notes\pkb\electronics\amplis\emitterfollower\emitterfollower.asc
+Q1 Vcc N001 VoutEF 0 2N2222
+R1 Vcc N001 {2*R}
+R2 N001 0 {R}
+R3 Vcc VoutVD {2*R}
+R4 VoutVD 0 {R}
+V1 Vcc 0 15
+V2 Load 0 PULSE(5k 5 0 1m 1n 1 1)
+V3 Vin 0 PULSE(20 -20 0 1m 1n 1 1)
+Q2 Vcc Vin N002 0 2N2222
+R6 VoutVD 0 R=V(load)
+R7 VoutEF 0 R=V(load)
+R9 N003 0 1k
+R10 N003 0 100
+R5 N002 0 100
+R8 N002 0 1k
+Q4 _Vcc Vin N003 0 PNP
+V6 _Vcc 0 -15
+.model NPN NPN
+.model PNP PNP
+.lib C:\users\carles\My Documents\LTspiceXVII\lib\cmp\standard.bjt
+.tran 1m
+;.step param R 1 100 10
+.param R 1
+* Emitter follower
+* A transistor current amplificator in which the voltage at the emitter follows \nthe voltage base at the base.
+* Useful when we want to avoid loading effect in a voltage source: the base\nwill present an input impedance 1+hfe times greater than the load, and \nthe load will see a voltage source with 1+hfe times less output impedance.
+* For instance: suppose we want to obtain a 5V source from a 15V source.\nWe compare a simple voltage divider with a VD plus an emitter follower.\nWe increase the load current from 5kOhm to 5 Ohm (which, if the 5V are\nmaintained, should correspond to currents from 1mA to 1A) and observe \nthe voltage drop at the output, which increases with the load.
+* If the resistors used are small the voltage divider causes a voltage drop smaller \nthan the follower's (try R=1). If we want to use bigger resistors to reduce the \nconsumed power, however, its performance starts to degrade, but the follower\nworks better (try R=100)
+* A limitation of this configuation is that it cannot amplify negative voltages.
+* Conclusion: to maintain the stiffness of the voltage output in a voltage divider\nwe have to use little resistors, which results in more power waste, but with the\nemitter follower we can achieve good stiffness even with small resistors.
+* The transistor begins to work (meaning the emitter follows the base)\nonce the voltage between collector and base is lower than 0.6 V, and \nit stops again when the voltage at the base drops below 0.6V.
+* A possible solution is using a PNP transistor, if we know the input voltage is \ngoing to be negative. If the input is bipolar then we must use both an NPN \nand a PNP transistor in what is called a push-pull configuration.
+.backanno
+.end
