@@ -1,5 +1,3 @@
-# links
-a collection of links I found interesting or useful
 ## ltspice
 * http://ltwiki.org
 * http://ltspicegoodies.ltwiki.org
