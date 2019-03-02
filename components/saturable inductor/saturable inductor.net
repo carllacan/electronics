@@ -3,8 +3,10 @@ L1 L1 0 {L} Rser=1m
 L2 L2 0 flux={x*L}
 B1 0 L1 I=time
 B2 0 L2 I=time
-L3 L3 0 flux={x*L*tanh(x/Isat)} Rser=1m
+L3 L3 0 flux={Isat*L*tanh(x/Isat)} Rser=1m
 B3 0 L3 I=time
+L4 L4 0 flux={x*L*tanh(x/Isat)} Rser=1m
+B4 0 L4 I=time
 .tran 5
 * Saturable inductor
 * Even though LTspice doesn't allow behavioural inductances it does allow behavioural\ncontrol of the flux through a coil, which we can use to simulate a saturable coil. This\nexpression can use the coil current, which for some reason is named x, but cannot\ndepend on any other dynamic variable (i.e. voltages or currents)
@@ -18,6 +20,8 @@ B3 0 L3 I=time
 * Constant inductance, as expected
 * To check that flux=x*L is equivalent
 * Saturation with tanh
-* To check that flux=x*L is equivalent
+* Inductance decays
+* A more accurate model
+* Takes into account that flux=I*L, \nbut I need to find a better function \nto model the\ninductance decay
 .backanno
 .end
