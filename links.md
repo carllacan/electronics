@@ -12,8 +12,12 @@
 * http://www.cds.caltech.edu/~murray/books/AM08/pdf/am06-pid_16Sep06.pdf
 * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007/lecture-notes/ch8.pdf
 ## magnetics
+* https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007/lecture-notes/ch6.pdf
 * http://w5jgv.com/hv-ps1/pdf/design_of_magnetic_components.pdf
 * https://www.smps.us/magnetics.html
+## Embedded
+* http://www.lighterra.com/papers/modernmicroprocessors/
+* https://www.embedded.fm/blog/ese101
 ## electric vehicles
 * https://www.youtube.com/watch?time_continue=445&v=3SAxXUIre28
 ## sources of interesting reads
