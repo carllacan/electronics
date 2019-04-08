@@ -16,6 +16,7 @@
 * http://w5jgv.com/hv-ps1/pdf/design_of_magnetic_components.pdf
 * https://www.smps.us/magnetics.html
 * http://info.ee.surrey.ac.uk/Workshop/advice/coils/gap/index.html
+* https://coefs.uncc.edu/mnoras/files/2013/03/Transformer-and-Inductor-Design-Handbook_Chapter_17.pdf
 ## Embedded
 * http://www.lighterra.com/papers/modernmicroprocessors/
 * https://www.embedded.fm/blog/ese101
