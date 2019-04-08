@@ -15,6 +15,7 @@
 * https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-334-power-electronics-spring-2007/lecture-notes/ch6.pdf
 * http://w5jgv.com/hv-ps1/pdf/design_of_magnetic_components.pdf
 * https://www.smps.us/magnetics.html
+* http://info.ee.surrey.ac.uk/Workshop/advice/coils/gap/index.html
 ## Embedded
 * http://www.lighterra.com/papers/modernmicroprocessors/
 * https://www.embedded.fm/blog/ese101
