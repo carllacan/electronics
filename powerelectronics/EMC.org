@@ -1,0 +1,8 @@
+* Equipment
+** LISNs
+** Receivers
+* Techniques
+** Filtering
+** Software
+*** Spread Spectrum aka Frequency Dithering
+ + https://www.ti.com/seclit/ml/slup269/slup269.pdf
